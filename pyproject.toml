@@ -45,10 +45,12 @@ onnx = [
     "tokenizers>=0.15",
     "huggingface-hub>=0.20",
 ]
+mcp = ["fastmcp>=2.0.0"]
 all = ["memsearch[google,voyage,jina,mistral,ollama,local,anthropic,onnx]"]
 
 [project.scripts]
 memsearch = "memsearch.cli:cli"
+memsearch-mcp = "memsearch.mcp:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/memsearch"]
